@@ -1,7 +1,8 @@
 /* Start Variables */
 :root {
-  
+  --main-color: #19c8fa;
 }
+
 /* End Variables */
 
 /* Start Gloale Rules */
@@ -9,6 +10,8 @@
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 html {
@@ -17,6 +20,11 @@ html {
 
 body {
   font-family: "Open Sans", sans-serif;
+  background-color: #000;
+}
+
+ul {
+  list-style: none;
 }
 
 .container {
@@ -51,3 +59,156 @@ body {
 /* Start Componants */
 
 /* End Componants */
+
+/* Start Header */
+header {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+header .container::before {
+  content: '';
+  position: absolute;
+  width: calc(100% - 30px);
+  height: 1px;
+  background-color: #a2a2a2;
+  bottom: 0;
+  left: 15px;
+}
+
+header .container .logo img {
+  height: 40px;
+}
+
+header .container nav {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+header .container nav ul {
+  display: flex;
+}
+
+header .container nav ul li a {
+  padding: 40px 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: block;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  border-bottom: 1px solid transparent;
+  transition: 0.3s;
+  position: relative;
+  z-index: 3;
+}
+
+header .container nav ul li a.active,
+header .container nav ul li a:hover {
+  color: var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+}
+
+header .container nav .form {
+  padding: 40px 0 40px 80px;
+  color: #fff;
+  position: relative;
+  cursor: pointer;
+}
+
+header .container nav .form:hover i {
+  color: var(--main-color);
+}
+
+header .container nav .form:hover.form::before {
+  background-color: var(--main-color);
+  width: 2px;
+}
+
+header .container nav .form::before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: calc(100% - 70px);
+  background-color: #fff;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 767px) {
+  header .container nav ul {
+    display: none;
+  }
+  
+  header .container nav .form {
+    padding-left: 50px;
+  }
+
+  header .container .logo {
+    padding: 20px 0;
+  }
+
+  header .container .burger-menu {
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 7px;
+  }
+
+  header .container .burger-menu span {
+    background-color: #fff;
+    height: 2px;
+  }
+
+  header .container .burger-menu span:nth-child(1),
+  header .container .burger-menu span:nth-child(3) {
+    flex-basis: 100%;
+  }
+
+  header .container .burger-menu span:nth-child(2) {
+    flex-basis: 70%;
+    transition: 0.3s;
+  }
+
+  header .container .burger-menu:hover span:nth-child(2) {
+    flex-basis: 100%;
+  }
+
+  header .container .burger-menu:hover {
+    transform: translateX(20px);
+  }
+
+  header .container .burger-menu:hover span{
+    transform: translateX(-10px);
+    background-color: var(--main-color);
+  }
+
+  header .container .burger-menu:hover + ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 15px;
+    width: calc(100% - 30px);
+    text-align: center;
+    background-color: #3333338f;
+  }
+
+  header .container .burger-menu:hover + ul li a {
+    padding: 20px;
+  }
+}
+/*ُ End Header */
