@@ -1,6 +1,7 @@
 /* Start Variables */
 :root {
   --main-color: #19c8fa;
+  --transparent-color: #0f748f70;
 }
 
 /* End Variables */
@@ -206,7 +207,7 @@ header .container nav .form::before {
     left: 15px;
     width: calc(100% - 30px);
     text-align: center;
-    background-color: #3333338f;
+    background-color: #333333f5;
   }
 
   header .container .burger-menu:hover + ul li a {
@@ -214,3 +215,148 @@ header .container nav .form::before {
   }
 }
 /*ُ End Header */
+
+/* Start Landing */
+.landing {
+  min-height: 100vh;
+  background-color: #1f2021;
+  background-image: url(../images/landing.jpg);
+  background-size: cover;
+  position: relative;
+}
+
+.landing .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #00000070;
+}
+
+.landing .text {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%;
+  padding: 50px;
+  background-color: var(--transparent-color);
+  color: #fff;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.landing .text .content {
+  max-width: 500px;
+}
+
+.landing .text .content h2 {
+  font-size: 32px;
+  font-weight: normal;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.landing .text .content p {
+  font-size: 13px;
+  line-height: 2;
+}
+
+.landing .change-background {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ddd;
+  cursor: pointer;
+}
+
+.landing .fa-angle-left {
+  left: 30px;
+}
+
+.landing .fa-angle-right {
+  right: 30px;
+}
+
+.landing .bullets {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.landing .bullets li {
+  width: 18px;
+  height: 18px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.landing .bullets li.active {
+  background-color: var(--main-color);
+  border: 1px solid var(--transparent-color);
+}
+
+@media (max-width: 1024px) {
+  .landing {
+    background-position: 50%;
+  }
+
+  .landing .text {
+    width: 60%;
+    padding-left: 90px;
+  }
+}
+
+@media (max-width: 768px) {
+  .landing {
+    background-position: 58%;
+  }
+  
+  .landing .text {
+    width: 62%;
+    padding-left: 78px;
+  }
+
+  .landing .text .content h2 {
+    font-size: 24px;
+  }
+
+  .landing .text .content p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 767px) {
+  .landing {
+    background-position: 70%;
+  }
+
+  .landing .text {
+    width: 100%;
+    padding-left: 50px;
+  }
+
+  .landing .text .content {
+    max-width: 100%;
+  }
+
+  .landing .text .content h2 {
+    font-size: 21px;
+  }
+
+  .landing .text .content p {
+    font-size: 11px;
+  }
+
+  .landing .change-background {
+    display: none;
+  }
+}
+/* End Landing */
