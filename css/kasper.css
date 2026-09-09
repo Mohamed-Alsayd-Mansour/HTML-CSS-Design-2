@@ -21,7 +21,6 @@ html {
 
 body {
   font-family: "Open Sans", sans-serif;
-  background-color: #000;
 }
 
 ul {
@@ -58,7 +57,55 @@ ul {
 /* End Gloale Rules */
 
 /* Start Componants */
+.main-heading {
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
 
+.main-heading h2 {
+  font-size: 32px;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  position: relative;
+}
+
+.main-heading h2::before {
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 1px;
+  background-color: #000;
+  bottom: -65%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.main-heading h2::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 50%;
+  bottom: -85%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.main-heading p {
+  font-size: 13px;
+  font-weight: 200;
+  color: #a8a8a8;
+  max-width: 435px;
+  line-height: 1.7;
+  text-align: center;
+}
 /* End Componants */
 
 /* Start Header */
@@ -360,3 +407,7 @@ header .container nav .form::before {
   }
 }
 /* End Landing */
+
+/* Start Services */
+
+/* End Services */
