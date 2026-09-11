@@ -2,6 +2,7 @@
 :root {
   --main-color: #19c8fa;
   --transparent-color: #0f748f70;
+  --paragraph-color: #a8a8a8;
 }
 
 /* End Variables */
@@ -58,7 +59,7 @@ ul {
 
 /* Start Componants */
 .main-heading {
-  padding: 80px 0;
+  padding: 100px 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -101,7 +102,7 @@ ul {
 .main-heading p {
   font-size: 13px;
   font-weight: 200;
-  color: #a8a8a8;
+  color: var(--paragraph-color);
   max-width: 435px;
   line-height: 1.7;
   text-align: center;
@@ -409,5 +410,153 @@ header .container nav .form::before {
 /* End Landing */
 
 /* Start Services */
+.services-content {
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 80px;
+}
 
+.services-content .box {
+  flex-basis: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 90px;
+}
+
+.services-content .box i {
+  padding-top: 5px;
+}
+
+.services-content .box .srv-info h3 {
+  font-weight: normal;
+  margin-bottom: 30px;
+  color: var(--main-color);
+  font-size: 1.3rem;
+}
+
+.services-content .box .srv-info p {
+  color: var(--paragraph-color);
+  font-size: 13px;
+  line-height: 2;
+  text-align: justify;
+  hyphens: auto;
+}
+
+@media (max-width: 1024px) {
+  .services-content .box {
+    gap: 65px;
+  }
+}
+
+@media (max-width: 992px) {
+  .services-content .box {
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-content .box {
+    flex-basis: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .services-content .box .srv-info p,
+  .services-content .box .srv-info h3 {
+    text-align: center;
+  }
+
+  .services-content .box .srv-info p {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 425px) {
+  .services-content {
+    gap: 50px;
+  }
+}
 /* End Services */
+
+/* Start Design */
+.design {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  height: 600px;
+  position: relative;
+  background-image: url(../images/design-features.jpg);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.design::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #00000070;
+}
+
+.design .image,
+.design .text {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+}
+
+.design .image {
+  text-align: center;
+}
+
+.design .image img {
+  position: relative;
+  bottom: -150px;
+}
+
+.design .text {
+  color: #fff;
+  padding: 50px;
+  background-color: var(--transparent-color);
+}
+
+.design .text h2 {
+  font-size: 32px;
+  font-weight: normal;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.design .text ul li {
+  padding: 15px 0;
+}
+
+.design .text ul li::before {
+  font-family: "Font Awesome 6 Free";
+  content: '\f108';
+  font-weight: 900;
+  margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+  .design {
+    background-position: 50% 0;
+  }
+
+  .design .image{
+    display: none;
+  }
+
+  .design .text h2 {
+    font-size: 22px;
+  }
+}
+/* End Design */
