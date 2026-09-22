@@ -1125,6 +1125,7 @@ header .container nav .form::before {
 }
 
 .pricing .pricing-table .pricing-box {
+  background-color: #fcfcfc;
   flex-basis: 23%;
   text-align: center;
   display: flex;
@@ -1185,8 +1186,9 @@ header .container nav .form::before {
 }
 
 .pricing .pricing-table .pricing-box .buy-btn {
-  padding: 40px 0 0;
+  padding: 40px 0;
   border-top: 1px solid var(--main-color); 
+  border-bottom: 1px solid var(--main-color); 
 }
 
 .pricing .pricing-table .pricing-box .buy-btn .btn {
