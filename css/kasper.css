@@ -1277,3 +1277,120 @@ header .container nav .form::before {
   }
 }
 /* End Pricing */
+
+/* Start Subscribe */
+.subscribe {
+  padding: 100px 0;
+  background-image: url(../images/subscribe.jpg);
+  background-size: cover;
+  position: relative;
+}
+
+.subscribe::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+  left: 0;
+  top: 0;
+}
+
+.subscribe .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.subscribe .subscribe-form {
+  border: 1px solid #fff;
+  flex-basis: 58%;
+  padding-left: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.subscribe .subscribe-form i {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+}
+
+.subscribe .subscribe-form input[type=email] {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  padding: 20px;
+  font-size: 13px;
+  flex-basis: 80%;
+}
+
+.subscribe .subscribe-form input[type=email]::placeholder {
+  color: #fff;
+  opacity: 1;
+  text-transform: uppercase;
+  transition: opacity 0.3s;
+}
+
+.subscribe .subscribe-form input[type=email]:focus {
+  outline: none;
+}
+
+.subscribe .subscribe-form input[type=email]:focus::placeholder {
+  opacity: 0;
+}
+
+.subscribe .subscribe-form input[type=submit] {
+  flex-basis: 20%;
+  padding: 20px 0;
+  border: none;
+  background-color: var(--main-color);
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.subscribe .subscribe-form input[type=submit]:hover {
+  background-color: #fff;
+  color: #1f2021;
+}
+
+.subscribe p {
+  flex-basis: 38%;
+  color: #fff;
+  font-size: 13px;
+  line-height: 2;
+}
+
+@media (max-width: 991px) {
+  .subscribe .container {
+    flex-wrap: wrap;
+    row-gap: 30px;
+  }
+
+  .subscribe .subscribe-form, .subscribe p{
+    flex-basis: 100%;
+  }
+
+  .subscribe p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 425px) {
+  .subscribe .subscribe-form input[type=email] {
+    flex-basis: 75%;
+  }
+
+  .subscribe .subscribe-form input[type=submit] {
+    flex-basis: 25%;
+  }
+}
+/* End Subscribe */
