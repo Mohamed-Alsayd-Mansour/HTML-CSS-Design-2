@@ -20,6 +20,11 @@ html {
   scroll-behavior: smooth;
 }
 
+html ::selection {
+  color: var(--main-color);
+  background-color: #f3f3f3;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
 }
