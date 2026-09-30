@@ -1604,6 +1604,7 @@ header .container nav .form::before {
   left: 50%;
   transform: translateX(-50%);
   bottom: -65px;
+  font-size: 15px;
 }
 
 .footer p span {
