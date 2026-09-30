@@ -3,6 +3,7 @@
   --main-color: #19c8fa;
   --transparent-color: #0f748f70;
   --paragraph-color: #a8a8a8;
+  --main-black: #1f2021;
 }
 
 /* End Variables */
@@ -272,7 +273,7 @@ header .container nav .form::before {
 /* Start Landing */
 .landing {
   min-height: 100vh;
-  background-color: #1f2021;
+  background-color: var(--main-black);
   background-image: url(../images/landing.jpg);
   background-size: cover;
   position: relative;
@@ -1139,7 +1140,7 @@ header .container nav .form::before {
 }
 
 .pricing .pricing-table .pricing-box .price {
-  color: #1f2021;
+  color: var(--main-black);
   padding: 40px 0;
   border-top: 1px solid var(--main-color);
   border-bottom: 1px solid var(--main-color);
@@ -1174,7 +1175,7 @@ header .container nav .form::before {
 }
 
 .pricing .pricing-table .pricing-box .features {
-  color: #1f2021;
+  color: var(--main-black);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1200,7 +1201,7 @@ header .container nav .form::before {
   font-size: 16px;
   border: 1px solid var(--main-color);
   background-color: #fff;
-  color: #1f2021;
+  color: var(--main-black);
   width: fit-content;
   margin: 0 auto;
   padding: 15px 30px;
@@ -1209,7 +1210,7 @@ header .container nav .form::before {
 }
 
 .pricing .pricing-table .pricing-box .buy-btn .btn:hover {
-  border: 1px solid #1f2021;
+  border: 1px solid var(--main-black);
   background-color: var(--main-color);
   color: #fff;
 }
@@ -1220,7 +1221,7 @@ header .container nav .form::before {
 }
 
 .pricing .special-price .special-request {
-  color: #1f2021;
+  color: var(--main-black);
   font-size: 20px;
   padding-bottom: 40px;
 }
@@ -1240,7 +1241,7 @@ header .container nav .form::before {
 .pricing .special-price .special-request-btn:hover {
   border: 1px solid var(--main-color);
   background-color: #fff;
-  color: #1f2021;
+  color: var(--main-black);
 }
 
 @media (max-width: 991px) {
@@ -1364,7 +1365,7 @@ header .container nav .form::before {
 
 .subscribe .subscribe-form input[type=submit]:hover {
   background-color: #fff;
-  color: #1f2021;
+  color: var(--main-black);
 }
 
 .subscribe p {
@@ -1399,3 +1400,233 @@ header .container nav .form::before {
   }
 }
 /* End Subscribe */
+
+/* Start Contact */
+.contact .content {
+  display: flex;
+  column-gap: 40px;
+  margin-bottom: 100px;
+}
+
+.contact .content .contact-form {
+  flex-basis: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.contact .content .contact-form input[type="text"],
+.contact .content .contact-form input[type="email"] {
+  background-color: transparent;
+  border: 1px solid var(--main-black);
+  color: var(--main-black);
+  padding: 20px;
+  font-size: 13px;
+}
+
+.contact .content .contact-form input::placeholder {
+  text-transform: uppercase;
+  opacity: 1;
+  color: var(--main-black);
+  transition: opacity 0.3s;
+}
+
+.contact .content .contact-form input:focus::placeholder,
+.contact .content .contact-form textarea:focus::placeholder {
+  opacity: 0;
+}
+
+.contact .content .contact-form input:focus,
+.contact .content .contact-form textarea:focus {
+  outline: none;
+}
+
+.contact .content .contact-form [name="message"] {
+  background-color: transparent;
+  border: 1px solid var(--main-black);
+  height: 200px;
+  resize: none;
+  color: var(--main-black);
+  padding: 20px;
+  font-size: 13px;
+}
+
+.contact .content .contact-form [name="message"]::placeholder {
+  text-transform: uppercase;
+  opacity: 1;
+  color: var(--main-black);
+  transition: opacity 0.3s;
+}
+
+.contact .content .contact-form [type="submit"] {
+  width: 25%;
+  padding: 20px;
+  margin-top: 25px;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: var(--main-color);
+  border: 1px solid transparent;
+  outline: none;
+  align-self: flex-end;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact .content .contact-form [type="submit"]:hover {
+  color: var(--main-black);
+  background-color: #fff;
+  border: 1px solid var(--main-color);
+  border-radius: 5px;
+}
+
+.contact .content .our-info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 115px;
+}
+
+.contact .content .our-info h3 {
+  text-transform: uppercase;
+  font-size: 13px;
+  color: var(--main-black);
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.contact .content .our-info .number,
+.contact .content .our-info .address {
+  color: var(--paragraph-color);
+  font-size: 13px;
+  padding: 5px 0;
+}
+
+@media (max-width: 991px) {
+  .contact .content .contact-form [type="submit"] {
+    width: 40%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact .content {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .contact .content .contact-form {
+    flex-basis: 100%;
+  }
+
+  .contact .content .contact-form [type="submit"] {
+    align-self: center;
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
+
+  .contact .content .our-info {
+    flex-direction: row;
+    column-gap: 115px;
+  }
+}
+/* End Contact */
+
+/* Start Footer */
+.footer {
+  padding: 100px 0;
+  background-image: url(../images/footer.png);
+  background-size: cover;
+  position: relative;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 70%);
+  top: 0;
+  left: 0;
+}
+
+.footer .container {
+  position: relative;
+  text-align: center;
+  color: #fff;
+}
+
+.footer img {
+  padding-bottom: 20px;
+}
+
+.footer h4 {
+  font-weight: normal;
+  font-size: 20px;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.footer h4::before {
+  content: '';
+  position: absolute;
+  width: calc(100% + 50px);
+  height: 2px;
+  background-color: #fff;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.footer .links {
+  padding-top: 20px;
+}
+
+.footer .links a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.footer .links a:hover i{
+  color: var(--main-color);
+  transform: translateY(-2px);
+}
+
+.footer .links a:not(:last-child) {
+  padding-right: 30px;
+}
+
+.footer p {
+  text-transform: capitalize;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -65px;
+}
+
+.footer p span {
+  color: var(--main-color);
+}
+
+@media (max-width: 425px) {
+  .footer h4 {
+    font-size: 18px;
+  }
+
+  .footer p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 375px) {
+  .footer h4 {
+    font-size: 16px;
+  }
+
+  .footer p {
+    font-size: 11px;
+  }
+}
+/* End Footer */
