@@ -1520,13 +1520,20 @@ header .container nav .form::before {
   .contact .content .contact-form [type="submit"] {
     align-self: center;
     margin-top: 0;
-    margin-bottom: 40px;
   }
 
   .contact .content .our-info {
     flex-direction: row;
     column-gap: 115px;
+    margin-bottom: 40px;
+    order: -1;
   }
+}
+
+@media (max-width: 425px) {
+    .contact .content .our-info {
+      column-gap: 90px;
+    }
 }
 /* End Contact */
 
@@ -1607,8 +1614,10 @@ header .container nav .form::before {
   font-size: 15px;
 }
 
-.footer p span {
+.footer p a {
+  text-decoration: none;
   color: var(--main-color);
+  font-weight: 600;
 }
 
 @media (max-width: 425px) {
